@@ -51,29 +51,106 @@ export const OBSERVATION_QUESTIONS = [
 ];
 
 export const TESTS = [
-  // Temp clair vs Brun", optionA: "Clair", optionB: "Foncé" },  // Température
+  // ==============================
+  // TEMPÉRATURE
+  // ==============================
+  {
+    key: "A1",
+    section: "Température",
+    title: "Quel bijou illumine le plus votre visage ?",
+    optionA: "Or",
+    optionB: "Argent",
+  },
+  {
+    key: "A2",
+    section: "Température",
+    title: "Quelle couleur donne le plus de bonne mine ?",
+    optionA: "Corail",
+    optionB: "Fuchsia",
+  },
+  {
+    key: "A3",
+    section: "Température",
+    title: "Quelle teinte adoucit le plus les traits ?",
+    optionA: "Saumon",
+    optionB: "Rose guimauve",
+  },
+  {
+    key: "A4",
+    section: "Température",
+    title: "Quelle couleur éclaire le plus le teint ?",
+    optionA: "Jaune bouton d'or",
+    optionB: "Bleu ciel",
+  },
 
-  // Température
-  { key: "A1", section: "Température", title: "Or vs Argent", optionA: "Or", optionB: "Argent" },
-  { key: "A2", section: "Température", title: "Saumon vs Violette", optionA: "Saumon", optionB: "Violette" },
-  { key: "A3", section: "Température", title: "Jaune bouton d'or vs Parme", optionA: "Jaune bouton d'or", optionB: "Parme" },
-  { key: "A4", section: "Température", title: "Vert olive vs Bleu roi", optionA: "Vert olive", optionB: "Bleu roi" },
+  // ==============================
+  // VALEUR (CLAIR / SOMBRE)
+  // ==============================
+  {
+    key: "B1",
+    section: "Valeur",
+    title: "Quelle couleur illumine le plus votre visage ?",
+    optionA: "Bleu ciel",
+    optionB: "Bleu roi",
+  },
+  {
+    key: "B2",
+    section: "Valeur",
+    title: "Votre visage est plus harmonieux avec :",
+    optionA: "Ivoire",
+    optionB: "Chocolat",
+  },
+  {
+    key: "B3",
+    section: "Valeur",
+    title: "Quelle teinte met le plus votre visage en valeur ?",
+    optionA: "Vert lichens",
+    optionB: "Vert sapin",
+  },
 
-  // Valeur
-  { key: "B1", section: "Valeur", title: "Rose guimauve vs Chocolat", optionA: "Rose guimauve", optionB: "Chocolat" },
-  { key: "B2", section: "Valeur", title: "Ivoire vs Noir", optionA: "Ivoire", optionB: "Noir" },
-  { key: "B3", section: "Valeur", title: "Bleu ciel vs Bleu pétrol", optionA: "Bleu ciel", optionB: "Bleu pétrol" },
+  // ==============================
+  // INTENSITÉ (DOUX / VIF)
+  // ==============================
+  {
+    key: "C1",
+    section: "Intensité",
+    title: "Quelle couleur donne un teint plus frais ?",
+    optionA: "Saumon",
+    optionB: "Corail",
+  },
+  {
+    key: "C2",
+    section: "Intensité",
+    title: "Votre visage supporte mieux :",
+    optionA: "Vert lichens",
+    optionB: "Vert pomme",
+  },
+  {
+    key: "C3",
+    section: "Intensité",
+    title: "Quelle couleur est la plus flatteuse ?",
+    optionA: "Rose guimauve",
+    optionB: "Fuchsia",
+  },
 
-  // Intensité
-  { key: "C1", section: "Intensité", title: "Rose guimauve vs Fushia", optionA: "Rose guimauve", optionB: "Fushia" },
-  { key: "C2", section: "Intensité", title: "Vert lichen vs Vert pomme", optionA: "Vert lichen", optionB: "Vert pomme" },
-  { key: "C3", section: "Intensité", title: "Parme vs Violette", optionA: "Parme", optionB: "Violette" },
-
-  // Contraste
-  { key: "D1", section: "Contraste", title: "Noir vs Blanc pur", optionA: "Noir", optionB: "Blanc pur" },
-  { key: "D2", section: "Contraste", title: "Ivoire vs Chocolat", optionA: "Ivoire", optionB: "Chocolat" },
-
-  ];
+  // ==============================
+  // CONTRASTE (LOGIQUE CROISÉE)
+  // ==============================
+  {
+    key: "D1",
+    section: "Contraste",
+    title: "Entre ces contrastes forts, lequel met le plus votre visage en valeur ?",
+    optionA: "Noir",
+    optionB: "Blanc pur",
+  },
+  {
+    key: "D2",
+    section: "Contraste",
+    title: "Entre ces contrastes plus doux, lequel est le plus harmonieux ?",
+    optionA: "Ivoire",
+    optionB: "Chocolat",
+  },
+];
 
 
 // ==============================

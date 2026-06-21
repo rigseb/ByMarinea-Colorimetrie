@@ -114,13 +114,43 @@ function swatchTextColor(hex) {
 }
 
 function computeObservationAxes(observation) {
+  const undertoneTemperature =
+    observation.undertone === "warm"
+      ? "chaud"
+      : observation.undertone === "cold"
+      ? "froid"
+      : "indéterminée";
+
+  const hairTemperature =
+    observation.hair === "warm"
+      ? "chaud"
+      : observation.hair === "cool"
+      ? "froid"
+      : observation.hair === "neutral"
+      ? "neutre"
+      : "indéterminée";
+
+  const inferredTemperature =
+    undertoneTemperature !== "indéterminée"
+      ? undertoneTemperature
+      : hairTemperature === "chaud" || hairTemperature === "froid"
+      ? hairTemperature
+      : "indéterminée";
+
+  const value =
+    observation.eyes === "light"
+      ? "clair"
+      : observation.eyes === "deep"
+      ? "profond"
+      : observation.eyes === "medium"
+      ? "moyen"
+      : "indéterminée";
+
   return {
-    temperature:
-      observation.undertone === "warm"
-        ? "chaud"
-        : observation.undertone === "cold"
-        ? "froid"
-        : "indéterminée",
+    temperature: inferredTemperature,
+    undertoneTemperature,
+    hairTemperature,
+    value,
     contrast:
       observation.contrast === "low"
         ? "faible"
