@@ -13,21 +13,21 @@ const MATRIX_RULES = {
     preferred: { value: "clair" },
     familyBonus: 6.2,
     exactBonus: 3.6,
-    antiBonus: { lowContrast: -3.5, softIntensity: -2.8 },
+    antiBonus: { lowContrast: -3.5, softIntensity: -3.4 },
   },
   "Hiver Froid": {
     required: { temperature: "froid", contrast: "fort", intensity: "vif" },
     preferred: { value: "moyen" },
     familyBonus: 5.8,
     exactBonus: 3.2,
-    antiBonus: { lowContrast: -3.2, softIntensity: -2.5 },
+    antiBonus: { lowContrast: -3.2, softIntensity: -4.2 },
   },
   "Hiver Profond": {
     required: { temperature: "froid", contrast: "fort", intensity: "vif" },
     preferred: { value: "profond" },
     familyBonus: 5.0,
     exactBonus: 2.2,
-    antiBonus: { lowContrast: -3.2, softIntensity: -2.5 },
+    antiBonus: { lowContrast: -3.2, softIntensity: -4.4 },
   },
 
   "Été Clair": {
@@ -488,6 +488,36 @@ function getHybridRuleBonus(profile, axes, observationAxes) {
   }
 
   // =========================
+  // CAS FROIDS MOYENS + DOUX
+  // éviter de basculer trop vite vers Hiver
+  // =========================
+  if (
+    axes.temperature === "froid" &&
+    axes.value === "moyen" &&
+    axes.intensity === "doux"
+  ) {
+    if (name === "Été Froid") {
+      bonus += 2.4;
+      details.push("froid + moyen + doux => été froid renforcé (+2.4)");
+    }
+
+    if (name === "Été Doux") {
+      bonus += 1.2;
+      details.push("froid + moyen + doux => été doux reste plausible (+1.2)");
+    }
+
+    if (name === "Hiver Froid") {
+      bonus -= 1.8;
+      details.push("hiver froid freiné si intensité trop douce (-1.8)");
+    }
+
+    if (name === "Hiver Profond") {
+      bonus -= 2.0;
+      details.push("hiver profond freiné si intensité trop douce (-2.0)");
+    }
+  }
+
+  // =========================
   // FAMILLE ÉTÉ
   // =========================
   if (axes.temperature === "froid" && axes.contrast === "faible" && axes.intensity === "doux") {
@@ -520,6 +550,50 @@ function getHybridRuleBonus(profile, axes, observationAxes) {
     if (name === "Hiver Froid") {
       bonus += 1.2;
       details.push("hiver froid reste envisageable (+1.2)");
+    }
+  }
+
+  // =========================
+  // CAS ÉTÉ DOUX vs ÉTÉ CLAIR
+  // =========================
+  if (
+    axes.temperature === "froid" &&
+    axes.intensity === "doux" &&
+    axes.contrast === "faible"
+  ) {
+    if (name === "Été Doux" && observationAxes?.value === "moyen") {
+      bonus += 2.0;
+      details.push("observation moyenne + froid + doux + faible => été doux (+2.0)");
+    }
+
+    if (name === "Été Clair" && observationAxes?.value === "moyen") {
+      bonus -= 1.4;
+      details.push("été clair freiné si observation plus moyenne que claire (-1.4)");
+    }
+  }
+
+  // =========================
+  // CAS CHAUDS PROFONDS + FORTS
+  // prioriser Automne Profond sur Printemps Lumineux
+  // =========================
+  if (
+    axes.temperature === "chaud" &&
+    axes.value === "profond" &&
+    axes.contrast === "fort"
+  ) {
+    if (name === "Automne Profond") {
+      bonus += 4.6;
+      details.push("chaud + profond + fort => automne profond prioritaire (+4.6)");
+    }
+
+    if (name === "Automne Chaud") {
+      bonus += 1.2;
+      details.push("automne chaud reste plausible en soutien (+1.2)");
+    }
+
+    if (name === "Printemps Lumineux") {
+      bonus -= 4.0;
+      details.push("printemps lumineux freiné si valeur profonde (-4.0)");
     }
   }
 
