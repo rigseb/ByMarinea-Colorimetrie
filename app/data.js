@@ -189,17 +189,17 @@ export const PROFILES = [
     palettes: {
       base: [
         { hex: "#E9A0A8", nom: "rose pêche clair" },
-        { hex: "#E6E0B3", nom: "jaune vanille doux" },
+        { hex: "#FFF2A6", nom: "jaune citron clair" },
         { hex: "#72B7B5", nom: "turquoise doux" },
         { hex: "#7EDB89", nom: "vert printemps clair" },
         { hex: "#F0926B", nom: "abricot corail" }
       ],
       neutres: [
         { hex: "#E7E4D7", nom: "ivoire chaud" },
-        { hex: "#D5BBA0", nom: "beige sable" },
+        { hex: "#F4D8A8", nom: "beige ivoire chaud lumineux" },
         { hex: "#E6C998", nom: "beige miel" },
         { hex: "#C3A57A", nom: "camel doré" },
-        { hex: "#E4D8CD", nom: "nude chaud" }
+        { hex: "#FFD1B3", nom: "pêche clair lumineux" }
       ],
       accents: [
         { hex: "#F5C900", nom: "jaune soleil" },
@@ -208,7 +208,7 @@ export const PROFILES = [
         { hex: "#EBC59F", nom: "pêche dorée" },
         { hex: "#9F93BA", nom: "lavande grisée" }
       ]
-    },
+    }    
   
   },
 
@@ -300,9 +300,9 @@ export const PROFILES = [
       ],
       neutres: [
         { hex: "#EDEDED", nom: "blanc perle" },
-        { hex: "#0B178B", nom: "bleu marine électrique" },
-        { hex: "#C9A97F", nom: "camel clair" },
-        { hex: "#A59C8E", nom: "taupe chaud" },
+        { hex: "#3A5FCD", nom: "bleu lumineux" },
+        { hex: "#E9C46A", nom: "camel lumineux doré" },
+        { hex: "#D8B98A", nom: "beige doré lumineux" },
         { hex: "#E4CFA3", nom: "beige doré" }
       ],
       accents: [
@@ -346,18 +346,22 @@ export const PROFILES = [
     avoid: ["orange", "camel chaud", "noir profond"],
     palettes: {
       base: [
-        { hex: "#C2A8C0", nom: "mauve poudré" },
-        { hex: "#9FC7CD", nom: "bleu aqua poudré" },
-        { hex: "#C3C7D8", nom: "bleu gris lavande" },
-        { hex: "#A6B3BF", nom: "gris bleuté clair" },
-        { hex: "#BFD5C9", nom: "vert d’eau pastel" }
+        
+{ hex: "#D8BFD8", nom: "lilas clair lumineux" },
+{ hex: "#BFD7FF", nom: "bleu ciel lumineux" },
+{ hex: "#C3C7D8", nom: "bleu gris lavande" },
+{ hex: "#A6B3BF", nom: "gris bleuté clair" },
+{ hex: "#BFD5C9", nom: "vert d’eau pastel" }
+
       ],
       neutres: [
-        { hex: "#E6E6E6", nom: "gris perle clair" },
-        { hex: "#B5B5B5", nom: "gris clair" },
-        { hex: "#A79F9A", nom: "taupe grisé" },
-        { hex: "#BEBEBE", nom: "gris argent" },
-        { hex: "#D5D2C8", nom: "grège froid" }
+        
+{ hex: "#DCE6F2", nom: "gris très clair lumineux" },
+{ hex: "#B5B5B5", nom: "gris clair" },
+{ hex: "#D5D2C8", nom: "grège froid" },
+{ hex: "#BEBEBE", nom: "gris argent" },
+{ hex: "#E6E6E6", nom: "gris perle clair" }
+
       ],
       accents: [
         { hex: "#C69C9C", nom: "rose poudré" },
@@ -454,21 +458,21 @@ export const PROFILES = [
         { hex: "#6F8091", nom: "bleu gris froid" },
         { hex: "#2F5B7A", nom: "bleu pétrole froid" },
         { hex: "#7C7380", nom: "prune grisée" },
-        { hex: "#8A7361", nom: "taupe brun froid" }
+        { hex: "#B7C9E2", nom: "bleu gris froid clair" }
       ],
       neutres: [
-        { hex: "#C9CEDF", nom: "gris pervenche clair" },
+        { hex: "#D6DCE8", nom: "gris froid lumineux" },
         { hex: "#6F8091", nom: "bleu gris froid" },
         { hex: "#2F5B7A", nom: "bleu pétrole froid" },
         { hex: "#7C7380", nom: "prune grisée" },
-        { hex: "#8A7361", nom: "taupe brun froid" }
+        { hex: "#AFC6CF", nom: "bleu gris doux" }
       ],
       accents: [
         { hex: "#99C4CC", nom: "bleu glacier" },
         { hex: "#B89BB4", nom: "mauve rosé doux" },
         { hex: "#6FA19A", nom: "vert d’eau fumé" },
         { hex: "#B87A78", nom: "rose bois froid" },
-        { hex: "#7F8E7A", nom: "kaki froid grisé" }
+        { hex: "#AFC6CF", nom: "bleu gris doux" }
       ]
     },
   
@@ -622,11 +626,13 @@ export const PROFILES = [
         { hex: "#8A6A45", nom: "camel foncé" }
       ],
       accents: [
-        { hex: "#9C0000", nom: "rouge brique profond" },
-        { hex: "#2E8B2E", nom: "vert forêt" },
-        { hex: "#B87433", nom: "orange cuir" },
-        { hex: "#8B4513", nom: "brun selle" },
-        { hex: "#FF5A00", nom: "orange feu" }
+        
+{ hex: "#9C0000", nom: "rouge brique profond" },
+{ hex: "#2E8B2E", nom: "vert forêt" },
+{ hex: "#B87433", nom: "orange cuir" },
+{ hex: "#8B4513", nom: "brun selle" },
+{ hex: "#C65A1E", nom: "orange brûlé" }
+
       ]
     },
   
@@ -671,11 +677,13 @@ export const PROFILES = [
         { hex: "#E3133A", nom: "framboise froide" }
       ],
       neutres: [
-        { hex: "#F0F0F0", nom: "blanc optique" },
-        { hex: "#000000", nom: "noir" },
-        { hex: "#0B0B8F", nom: "bleu marine froid" },
-        { hex: "#7A8C9A", nom: "gris acier bleuté" },
-        { hex: "#B5B5B5", nom: "gris moyen" }
+        
+{ hex: "#FFFFFF", nom: "blanc pur" },
+{ hex: "#000000", nom: "noir pur" },
+{ hex: "#0B0B8F", nom: "bleu marine froid" },
+{ hex: "#7A8C9A", nom: "gris acier bleuté" },
+{ hex: "#B5B5B5", nom: "gris moyen" }
+
       ],
       accents: [
         { hex: "#2E86DE", nom: "bleu électrique" },
@@ -723,11 +731,11 @@ export const PROFILES = [
         { hex: "#F01414", nom: "rouge pur" }
       ],
       neutres: [
-        { hex: "#F2F2F2", nom: "blanc pur" },
-        { hex: "#000000", nom: "noir" },
-        { hex: "#0B0B8F", nom: "bleu marine intense" },
-        { hex: "#A9A9A9", nom: "gris neutre" },
-        { hex: "#23237A", nom: "bleu encre" }
+          { hex: "#FFFFFF", nom: "blanc pur" },
+          { hex: "#000000", nom: "noir" },
+          { hex: "#0B0B8F", nom: "bleu marine intense" },
+          { hex: "#FFFFFF", nom: "blanc pur lumineux" },
+          { hex: "#23237A", nom: "bleu encre" }
       ],
       accents: [
         { hex: "#00F000", nom: "vert néon" },
