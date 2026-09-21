@@ -51,105 +51,119 @@ export const OBSERVATION_QUESTIONS = [
 ];
 
 export const TESTS = [
+
   // ==============================
   // TEMPÉRATURE
   // ==============================
+
   {
     key: "A1",
     section: "Température",
     title: "Quel bijou illumine le plus votre visage ?",
     optionA: "Or",
-    optionB: "Argent",
+    optionB: "Argent"
   },
+
   {
     key: "A2",
     section: "Température",
-    title: "Quelle couleur donne le plus de bonne mine ?",
+    title: "Quelle couleur donne le plus bonne mine ?",
     optionA: "Corail",
-    optionB: "Fuchsia",
+    optionB: "Fuchsia"
   },
+
   {
     key: "A3",
     section: "Température",
     title: "Quelle teinte adoucit le plus les traits ?",
     optionA: "Saumon",
-    optionB: "Rose guimauve",
+    optionB: "Rose guimauve"
   },
+
   {
     key: "A4",
     section: "Température",
     title: "Quelle couleur éclaire le plus le teint ?",
-    optionA: "Jaune bouton d'or",
-    optionB: "Bleu ciel",
+    optionA: "Ivoire",
+    optionB: "Blanc"
   },
 
   // ==============================
-  // VALEUR (CLAIR / SOMBRE)
+  // VALEUR
   // ==============================
+
   {
     key: "B1",
     section: "Valeur",
     title: "Quelle couleur illumine le plus votre visage ?",
     optionA: "Bleu ciel",
-    optionB: "Bleu roi",
+    optionB: "Bleu roi"
   },
+
   {
     key: "B2",
     section: "Valeur",
     title: "Votre visage est plus harmonieux avec :",
-    optionA: "Ivoire",
-    optionB: "Chocolat",
+    optionA: "Vert lichen",
+    optionB: "Vert sapin"
   },
+
   {
     key: "B3",
     section: "Valeur",
     title: "Quelle teinte met le plus votre visage en valeur ?",
-    optionA: "Vert lichens",
-    optionB: "Vert sapin",
+    optionA: "Saumon",
+    optionB: "Rouge éclatant"
   },
 
   // ==============================
-  // INTENSITÉ (DOUX / VIF)
+  // INTENSITÉ
   // ==============================
+
   {
     key: "C1",
     section: "Intensité",
     title: "Quelle couleur donne un teint plus frais ?",
     optionA: "Saumon",
-    optionB: "Corail",
+    optionB: "Corail"
   },
+
   {
     key: "C2",
     section: "Intensité",
     title: "Votre visage supporte mieux :",
-    optionA: "Vert lichens",
-    optionB: "Vert pomme",
+    optionA: "Rose guimauve",
+    optionB: "Fuchsia"
   },
+
   {
     key: "C3",
     section: "Intensité",
     title: "Quelle couleur est la plus flatteuse ?",
-    optionA: "Rose guimauve",
-    optionB: "Fuchsia",
+    optionA: "Moutarde",
+    optionB: "Rouge éclatant"
   },
 
   // ==============================
-  // CONTRASTE (LOGIQUE CROISÉE)
+  // CONTRASTE
   // ==============================
+
   {
     key: "D1",
     section: "Contraste",
-    title: "Entre ces contrastes forts, lequel met le plus votre visage en valeur ?",
-    optionA: "Noir",
-    optionB: "Blanc pur",
+    title: "Quel ensemble met davantage votre visage en valeur ?",
+    optionA: "Ivoire + Chocolat",
+    optionB: "Blanc + Noir"
   },
+
   {
     key: "D2",
     section: "Contraste",
-    title: "Entre ces contrastes plus doux, lequel est le plus harmonieux ?",
-    optionA: "Ivoire",
-    optionB: "Chocolat",
-  },
+    title: "Avec quel ensemble votre visage paraît le plus harmonieux ?",
+    optionA: "Parme + Bleu pétrole",
+    optionB: "Blanc + Bleu roi"
+  }
+
 ];
 
 
@@ -189,17 +203,17 @@ export const PROFILES = [
     palettes: {
       base: [
         { hex: "#E9A0A8", nom: "rose pêche clair" },
-        { hex: "#FFF2A6", nom: "jaune citron clair" },
+        { hex: "#E6E0B3", nom: "jaune vanille doux" },
         { hex: "#72B7B5", nom: "turquoise doux" },
         { hex: "#7EDB89", nom: "vert printemps clair" },
         { hex: "#F0926B", nom: "abricot corail" }
       ],
       neutres: [
         { hex: "#E7E4D7", nom: "ivoire chaud" },
-        { hex: "#F4D8A8", nom: "beige ivoire chaud lumineux" },
+        { hex: "#D5BBA0", nom: "beige sable" },
         { hex: "#E6C998", nom: "beige miel" },
         { hex: "#C3A57A", nom: "camel doré" },
-        { hex: "#FFD1B3", nom: "pêche clair lumineux" }
+        { hex: "#E4D8CD", nom: "nude chaud" }
       ],
       accents: [
         { hex: "#F5C900", nom: "jaune soleil" },
@@ -208,7 +222,7 @@ export const PROFILES = [
         { hex: "#EBC59F", nom: "pêche dorée" },
         { hex: "#9F93BA", nom: "lavande grisée" }
       ]
-    }    
+    },
   
   },
 
@@ -301,8 +315,8 @@ export const PROFILES = [
       neutres: [
         { hex: "#EDEDED", nom: "blanc perle" },
         { hex: "#0B178B", nom: "bleu marine électrique" },
-        { hex: "#E9C46A", nom: "camel lumineux doré" },
-        { hex: "#D8B98A", nom: "beige doré lumineux" },
+        { hex: "#C9A97F", nom: "camel clair" },
+        { hex: "#A59C8E", nom: "taupe chaud" },
         { hex: "#E4CFA3", nom: "beige doré" }
       ],
       accents: [
@@ -346,22 +360,18 @@ export const PROFILES = [
     avoid: ["orange", "camel chaud", "noir profond"],
     palettes: {
       base: [
-        
-{ hex: "#D8BFD8", nom: "lilas clair lumineux" },
-{ hex: "#BFD7FF", nom: "bleu ciel lumineux" },
-{ hex: "#C3C7D8", nom: "bleu gris lavande" },
-{ hex: "#A6B3BF", nom: "gris bleuté clair" },
-{ hex: "#BFD5C9", nom: "vert d’eau pastel" }
-
+        { hex: "#C2A8C0", nom: "mauve poudré" },
+        { hex: "#9FC7CD", nom: "bleu aqua poudré" },
+        { hex: "#C3C7D8", nom: "bleu gris lavande" },
+        { hex: "#A6B3BF", nom: "gris bleuté clair" },
+        { hex: "#BFD5C9", nom: "vert d’eau pastel" }
       ],
       neutres: [
-        
-{ hex: "#DCE6F2", nom: "gris très clair lumineux" },
-{ hex: "#B5B5B5", nom: "gris clair" },
-{ hex: "#D5D2C8", nom: "grège froid" },
-{ hex: "#BEBEBE", nom: "gris argent" },
-{ hex: "#E6E6E6", nom: "gris perle clair" }
-
+        { hex: "#E6E6E6", nom: "gris perle clair" },
+        { hex: "#B5B5B5", nom: "gris clair" },
+        { hex: "#A79F9A", nom: "taupe grisé" },
+        { hex: "#BEBEBE", nom: "gris argent" },
+        { hex: "#D5D2C8", nom: "grège froid" }
       ],
       accents: [
         { hex: "#C69C9C", nom: "rose poudré" },
@@ -458,21 +468,21 @@ export const PROFILES = [
         { hex: "#6F8091", nom: "bleu gris froid" },
         { hex: "#2F5B7A", nom: "bleu pétrole froid" },
         { hex: "#7C7380", nom: "prune grisée" },
-        { hex: "#B7C9E2", nom: "bleu gris froid clair" }
+        { hex: "#8A7361", nom: "taupe brun froid" }
       ],
       neutres: [
-        { hex: "#D6DCE8", nom: "gris froid lumineux" },
+        { hex: "#C9CEDF", nom: "gris pervenche clair" },
         { hex: "#6F8091", nom: "bleu gris froid" },
         { hex: "#2F5B7A", nom: "bleu pétrole froid" },
         { hex: "#7C7380", nom: "prune grisée" },
-        { hex: "#AFC6CF", nom: "bleu gris doux" }
+        { hex: "#8A7361", nom: "taupe brun froid" }
       ],
       accents: [
         { hex: "#99C4CC", nom: "bleu glacier" },
         { hex: "#B89BB4", nom: "mauve rosé doux" },
         { hex: "#6FA19A", nom: "vert d’eau fumé" },
         { hex: "#B87A78", nom: "rose bois froid" },
-        { hex: "#AFC6CF", nom: "bleu gris doux" }
+        { hex: "#7F8E7A", nom: "kaki froid grisé" }
       ]
     },
   
@@ -626,13 +636,11 @@ export const PROFILES = [
         { hex: "#8A6A45", nom: "camel foncé" }
       ],
       accents: [
-        
-{ hex: "#9C0000", nom: "rouge brique profond" },
-{ hex: "#2E8B2E", nom: "vert forêt" },
-{ hex: "#B87433", nom: "orange cuir" },
-{ hex: "#8B4513", nom: "brun selle" },
-{ hex: "#C65A1E", nom: "orange brûlé" }
-
+        { hex: "#9C0000", nom: "rouge brique profond" },
+        { hex: "#2E8B2E", nom: "vert forêt" },
+        { hex: "#B87433", nom: "orange cuir" },
+        { hex: "#8B4513", nom: "brun selle" },
+        { hex: "#FF5A00", nom: "orange feu" }
       ]
     },
   
@@ -677,13 +685,11 @@ export const PROFILES = [
         { hex: "#E3133A", nom: "framboise froide" }
       ],
       neutres: [
-        
-{ hex: "#FFFFFF", nom: "blanc pur" },
-{ hex: "#000000", nom: "noir pur" },
-{ hex: "#0B0B8F", nom: "bleu marine froid" },
-{ hex: "#7A8C9A", nom: "gris acier bleuté" },
-{ hex: "#B5B5B5", nom: "gris moyen" }
-
+        { hex: "#F0F0F0", nom: "blanc optique" },
+        { hex: "#000000", nom: "noir" },
+        { hex: "#0B0B8F", nom: "bleu marine froid" },
+        { hex: "#7A8C9A", nom: "gris acier bleuté" },
+        { hex: "#B5B5B5", nom: "gris moyen" }
       ],
       accents: [
         { hex: "#2E86DE", nom: "bleu électrique" },
@@ -731,11 +737,11 @@ export const PROFILES = [
         { hex: "#F01414", nom: "rouge pur" }
       ],
       neutres: [
-          { hex: "#FFFFFF", nom: "blanc pur" },
-          { hex: "#000000", nom: "noir" },
-          { hex: "#0B0B8F", nom: "bleu marine intense" },
-          { hex: "#FFFFFF", nom: "blanc pur lumineux" },
-          { hex: "#23237A", nom: "bleu encre" }
+        { hex: "#F2F2F2", nom: "blanc pur" },
+        { hex: "#000000", nom: "noir" },
+        { hex: "#0B0B8F", nom: "bleu marine intense" },
+        { hex: "#A9A9A9", nom: "gris neutre" },
+        { hex: "#23237A", nom: "bleu encre" }
       ],
       accents: [
         { hex: "#00F000", nom: "vert néon" },
